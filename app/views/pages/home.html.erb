@@ -1,4 +1,9 @@
 <h1>Home Page</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
-
+<h2> Blog posts </h2>
 <%= @posts.inspect %>
+<h2> Skills </h2>
+
+<%  @skill.each do |p| %>
+<strong>  <%=  "#{p[:title]}" %></strong> is nice <br>
+<% end %>
