@@ -7,5 +7,5 @@
 <h2> Skills </h2>
 
 <%  @skill.each do |p| %>
-<strong>  <%=  "#{p[:title]}" %></strong> is nice <br>
+<strong>  <%=  "#{p[:title]}, percent: #{p[:percent_utilized]}" %></strong> is nice <br>
 <% end %>
