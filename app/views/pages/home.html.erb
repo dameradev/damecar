@@ -1,11 +1,9 @@
-
 <h1>Hi, <%= current_user.first_name %></h1>
-
 <p>Find me in app/views/pages/home.html.erb</p>
+
 <h2> Blog posts </h2>
 <%= @posts.inspect %>
 <h2> Skills </h2>
+<%= @skills.inspect %>
 
-<%  @skill.each do |p| %>
-<strong>  <%=  "#{p[:title]}, percent: #{p[:percent_utilized]}" %></strong> is nice <br>
-<% end %>
+<hr>
