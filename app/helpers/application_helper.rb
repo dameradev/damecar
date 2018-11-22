@@ -15,6 +15,10 @@ module ApplicationHelper
      end
   end
 
+  def copyright_generator
+    @copyright = RadevViewTool::Renderer.copyright 'Damjan Radev', 'All rights reserved'
+  end
+
   # def sample_helper
   #   content_tag(:div, ' My content', class: 'my_class')
   # end
