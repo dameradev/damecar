@@ -63,4 +63,4 @@ gem 'bootstrap', '~> 4.1.3'
 
 gem 'jquery-rails'
 
-gem 'radev_view_tool', git: 'https://github.com/dameradev/radev_view_tool'
+gem 'radev_view_tool', '~> 0.1.0' 
