@@ -2,7 +2,7 @@
 
 <h1>Blogs</h1>
 
-<%= link_to 'New Blog', new_blog_path %>
+
 
 <table>
   <thead>
@@ -20,3 +20,5 @@
 </table>
 
 <br>
+
+<%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
