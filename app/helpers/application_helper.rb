@@ -19,7 +19,58 @@ module ApplicationHelper
     @copyright = RadevViewTool::Renderer.copyright 'Damjan Radev', 'All rights reserved'
   end
 
-  # def sample_helper
-  #   content_tag(:div, ' My content', class: 'my_class')
-  # end
+  def nav_items
+    [
+      {
+        url: root_path,
+        title: 'Home'
+      },
+      {
+        url: about_me_path,
+        title: 'About-me'
+      },
+      {
+        url: contact_path,
+        title: 'Contact'
+      },
+      {
+        url: blogs_path,
+        title: 'Blog'
+      },
+      {
+        url: portfolios_path,
+        title: 'Portfolio'
+      }
+
+    ]
+  end
+
+  def nav_helper style, tag_type
+    nav_links = ''
+
+    nav_items.each do |item|
+
+        nav_links << "<#{tag_type}><a href='#{item[:url]}' class='#{style} #{active? item[:url]}'>#{item[:title]}</a></#{tag_type}>"
+   end
+
+   nav_links.html_safe
+ end
+
+ def active? path
+   "active" if current_page? path
+ end
+
 end
+
+
+# def sample_helper
+#   content_tag(:div, ' My content', class: 'my_class')
+# end
+
+# def nav_helper style, tag_type
+#   (content_tag(tag_type, (link_to 'Home', root_path), class: style)) +
+#   (content_tag(tag_type, (link_to 'About me', about_me_path), class: style)) +
+#   (content_tag(tag_type, (link_to 'Contact', contact_path), class: style)) +
+#   (content_tag(tag_type, (link_to 'Blog', blogs_path), class: style)) +
+#   (content_tag(tag_type, (link_to 'Portfolio', portfolios_path), class: style))
+# end
