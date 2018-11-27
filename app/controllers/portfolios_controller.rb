@@ -13,6 +13,7 @@ class PortfoliosController < ApplicationController
       Portfolio.find(value[:id]).update(postion: value[:position])
     end
 
+
     render nothing: true
   end
 

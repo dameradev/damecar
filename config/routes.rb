@@ -3,9 +3,6 @@ Rails.application.routes.draw do
   resources :portfolios, except: [:show] do
     put :sort, on: :collection
   end
-
-
-
   get "angular-items", to: "portfolios#angular"
 
   resources :blogs do
