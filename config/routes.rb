@@ -15,11 +15,20 @@ Rails.application.routes.draw do
   get 'about-me', to: 'pages#about'
   get 'contact', to: 'pages#contact'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   mount ActionCable.server => '/cable'
 =======
   get 'tech-news', to: "pages#tech_news"
 >>>>>>> lib
+=======
+
+  get 'tech-news', to: "pages#tech_news"
+
+
+  mount ActionCable.server => '/cable'
+
+>>>>>>> 1b9ca647389102acee1c0aa8af06840282ad1062
   root to: 'pages#home'
 
 
