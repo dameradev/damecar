@@ -1,3 +1,4 @@
+#turbolink is rails's way of trying to load all of your files in a very performance oriented kind of mindset so that pages can load very fast.
 jQuery(document).on 'turbolinks:load', ->
   comments = $('#comments')
   if comments.length > 0

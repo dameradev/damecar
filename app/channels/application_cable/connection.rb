@@ -1,5 +1,6 @@
 module ApplicationCable
   class Connection < ActionCable::Connection::Base
+     #This is what is going to provide a lot of the information to our channel and its required especially for being able to supply a current user.
     identified_by :current_user
 
     def guest_user
