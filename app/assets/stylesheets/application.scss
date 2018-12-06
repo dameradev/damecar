@@ -179,3 +179,14 @@ body {
 .tech-news > .card {
   padding:30px;
 }
+
+.app-card-container {
+  color:black;
+  text-align: left;
+  .card {
+    padding: 40px;
+  }
+  a {
+    color:blue;
+  }
+}
