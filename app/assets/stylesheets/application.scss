@@ -183,10 +183,16 @@ body {
 .app-card-container {
   color:black;
   text-align: left;
-  .card {
-    padding: 40px;
-  }
+
   a {
     color:blue;
   }
+}
+.app-card-container > .card {
+  padding: 40px;
+}
+.card-block{
+  padding: 20px;
+  margin-top:5px;
+  margin-bottom:5px;
 }
