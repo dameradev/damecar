@@ -1,10 +1,15 @@
 <div class="col-sm-3 offset-1 blog-sidebar">
+
   <div class="sidebar-module sidebar-module-inset">
     <h2>Topics</h2>
     <% @side_bar_topics.each do |topic|  %>
       <p><%= link_to topic.title, topic_path(topic)%></p>
     <% end %>
   </div>
+
+
+    <%= source_helper("alert alert-info blog-sidebar-source") %>
+
 
 
 
